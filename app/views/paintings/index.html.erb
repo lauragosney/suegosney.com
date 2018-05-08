@@ -1,0 +1,58 @@
+
+<section class="min-height">
+
+  <div class="paintings">
+
+    <% @paintings.each do |painting| %>
+
+      <div class="painting fadein">
+
+        <%= link_to painting_path(painting) do %>
+            <%= image_tag painting.image.medium %>
+        <% end %>
+
+        <%= link_to painting.title, painting_path(painting) %>
+
+      </div>
+
+    <% end %>
+  </div>
+
+</section>
+
+
+<section>
+    <ul class="exhibitions fadein">
+      <li>
+        <h3>
+          Current exhibitions
+        </h3>
+        <h2>
+          a little bird told me gallery, 2018
+        </h2>
+        <p>
+          The Barn Courtyard, 25 High St, Wendover, Aylesbury HP22 6DU
+        </p>
+
+      </li>
+
+      <li>
+        <h3>
+          Upcoming exhibitions
+        </h3>
+        <h2>
+          Bucks Art Weeks, 9 - 24 June 2018
+        </h2>
+        <p>
+          Sunneyhill Barn, Brewhouse Lane, Rowsham, HP22 4QT
+        </p>
+      </li>
+    </ul>
+</section>
+
+<section>
+  <div class="instagram fadein">
+    <h3>@gosney_art</h3>
+    <div class="insta-container"  id="instafeed"></div>
+  </div>
+</section>

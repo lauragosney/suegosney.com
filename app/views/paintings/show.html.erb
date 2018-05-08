@@ -1,0 +1,70 @@
+<section class="min-height">
+  <div class="painting-show fadein">
+    <div class="painting-show-image">
+      <%= image_tag @painting.image.large %>
+    </div>
+
+    <div class="painting-show-copy">
+      <h3 class="padding-bottom-20"><%= @painting.title %></h3>
+
+      <p><%= @painting.description %></p>
+      <p><%= @painting.size %></p>
+      <p><%= @painting.price %></p>
+
+      <% if  @painting.gallery.present?%>
+        <p><%= @painting.gallery %></p>
+      <%end%>
+
+      <% if  @painting.is_sold?%>
+        <div class="sold">
+          <p>Sold</p>
+        </div>
+      <%end%>
+
+      <div class="buttons margin-top-max">
+
+        <div class="button-secondary">
+        <%= link_to root_path do %>
+          <%= image_tag "arrow_left.svg", class: "button-image-left" %>Back to gallery
+        <% end %>
+        </div>
+
+
+        <div class="buttons">
+          <div class="button-secondary">
+            <% if @painting.previous.present? %>
+                <%= link_to painting_path(@painting.previous) do  %>
+              <%= image_tag "arrow_left.svg", class: "button-image-left"  %>Previous /
+              <% end %>
+            <% end %>
+
+          </div>
+
+          <div class="button-secondary">
+              <% if @painting.next.present? %>
+                <%= link_to painting_path(@painting.next) do  %>
+                Next <%= image_tag "arrow_right.svg", class: "button-image-right" %>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+</section>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sue Gosney</title>
+      <%= favicon_link_tag 'favicon.png' %>
+    <%= csrf_meta_tags %>
+
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <h1><%=link_to "Sue Gosney", root_path %></h1>
+      <nav class="active link-underline">
+
+          <%= link_to "Gallery", root_path %>
+          <%= link_to "About", about_path %>
+          <%= link_to "Contact", contact_path %>
+      </nav>
+    </header>
+
+      <%= yield %>
+
+
+    <footer class="footer link-underline">
+        <p>Copyright © 2018</p>
+        <div>
+          <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com
+          </a>
+        </div>
+      </footer>
+
+      <script type="text/javascript">
+       var feed = new Instafeed({
+          get: 'user',
+          userId: 5519850249,
+          accessToken: '5519850249.8488c62.616187f93c144471a549d6738500bf11',
+          limit: 8,
+          resolution: 'low_resolution',
+          template:'<div class="instapic"><a href="{{link}}" target="_blank"><div class="overlay"><div class="caption"><div class="likes"><div class="heart"></div><h5>{{likes}}</h5></div><h6>{{caption}}</h6></div></div><img class="insta-image" src="{{image}}"/></a></div>',
+        });
+
+        feed.run();
+      </script>
+
+      <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
+
+
+  </body>
+</html>
