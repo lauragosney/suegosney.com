@@ -185,6 +185,11 @@ section {
   h2 {
     margin-bottom:20px;
   }
+
+  a {
+    font-size: $h3;
+    font-style: italic;
+  }
 }
 
 .buttons {
@@ -257,6 +262,7 @@ section {
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .instapic {
@@ -364,6 +370,10 @@ section {
   .about {
     align-items: flex-start;
 
+    .flex-item {
+      order: 2;
+    }
+
     .about-image {
       width: 40%;
     }
@@ -372,10 +382,6 @@ section {
       width: 60%;
       padding:0 40px 0 0;
     }
-  }
-
-  .flex-item {
-    order: 2;
   }
 
   .instapic {
@@ -421,6 +427,16 @@ section {
     a {
       font-size: $h2;
     }
+  }
+
+  .instagram {
+    a {
+      font-size: $h3;
+    }
+  }
+
+  .insta-container {
+    margin-top: 20px;
   }
 }
 
@@ -488,6 +504,10 @@ section {
 
     h2 {
       margin-bottom:20px;
+    }
+
+    a {
+      font-size: $h3;
     }
   }
 
