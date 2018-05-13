@@ -50,3 +50,68 @@
 
   }
 }
+
+@media (max-width: 1030px) {
+
+  .paintings .painting {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 990px) {
+
+  .painting-show {
+    .painting-show-image {
+      width:50%;
+    }
+
+    .painting-show-copy {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+
+  .paintings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .painting {
+      max-width: 100%;
+      opacity: 1;
+      transition: all 0.5s;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-bottom:100px;
+      align-content: center;
+      text-align: center;
+    }
+  }
+
+  .painting-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .painting-show-image {
+      width:100%;
+    }
+
+    .painting-show-copy {
+      width: 100%;
+      padding-left:0px;
+      padding-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .paintings {
+    .painting {
+      margin-bottom:40px;
+    }
+  }
+}
