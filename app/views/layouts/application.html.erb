@@ -27,9 +27,9 @@
       <h1><%=link_to "Sue Gosney", root_path %></h1>
       <nav class="active link-underline">
 
-          <%= link_to "Gallery", root_path %>
-          <%= link_to "About", about_path %>
-          <%= link_to "Contact", contact_path %>
+        <%= active_link_to "Gallery", root_path, active: :exact %>
+          <%= active_link_to "About", about_path, active: :exact %>
+          <%= active_link_to "Contact", contact_path, active: :exact %>
       </nav>
     </header>
 
