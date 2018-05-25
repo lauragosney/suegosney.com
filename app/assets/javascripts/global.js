@@ -31,4 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
           })
 
         })
+
+        $("form.newsletter").on("ajax:success", function (ev, data, status, xhr) {
+          $(this).html(event.detail[0])
+        }).on("ajax:error", function (e, xhr, status, error) {
+          alert("Please complete all required fields")
+        })
   })

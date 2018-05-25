@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: "paintings#index"
 
+  resource :newsletter
+
   resources :paintings
 
   get "about", to: "pages#about"
