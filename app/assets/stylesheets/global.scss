@@ -112,7 +112,7 @@ footer {
 }
 
 .min-height {
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 .about {
@@ -123,7 +123,7 @@ footer {
   transition: all 0.5s;
 
   .about-image {
-    width: 60%;
+    width: 40%;
 
 
     img {
@@ -132,7 +132,7 @@ footer {
   }
 
   .about-copy {
-    width: 40%;
+    width: 60%;
     padding:40px;
 
     p {
@@ -399,7 +399,7 @@ section {
 @media (max-width: 700px) {
 
   .min-height {
-    min-height: 50vh;
+    min-height: 25vh;
   }
 
   $h2:32px;
@@ -488,14 +488,15 @@ section {
       width: 100%;
       padding: 40px 0 0 0;
     }
-  }
 
-  .flex-item {
-    order: 0;
+    .flex-item {
+      order: 0;
+    }
   }
 
   .exhibitions li,
-  .instagram {
+  .instagram,
+  .newsletter_copy {
     margin-bottom: 80px;
 
     h3 {

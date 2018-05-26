@@ -50,10 +50,9 @@
     </ul>
 </section>
 
-<section class="container">
-  <div class= "fadein">
-    <h3>Interested in knowing more about our exhibitions?</h4>
-    <p> Sign up to our Newsletter to hear more about current and upcoming exhibitions </p>
+<section class="newsletter_container">
+  <div class= "newsletter_copy fadein">
+    <h3>Sign up to receive more details about upcoming exhibitions</h3>
   </div>
 
     <div class="newsletter_form fadein">
@@ -62,7 +61,7 @@
       <%= f.input :last_name, label: false, placeholder: "Last name*"%>
       <%= f.input :email, label: false, placeholder: "Email address*"%>
 
-      <%= f.button :submit,"Sign me up", class: "button_primary"  %>
+    <%= f.button :submit,"Sign me up" %>
 
       <p class="smallprint"> *all fields required </p>
 
