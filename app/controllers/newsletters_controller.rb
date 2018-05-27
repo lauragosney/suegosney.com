@@ -21,11 +21,11 @@ class NewslettersController < ApplicationController
    respond_to do |format|
      format.html do
        # backup if js fails
-       flash[:success] = "You have successfully subscribed to Sue Gosney Exhibitions "
+       flash[:success] = "You have successfully subscribed to my exhibitions newsletter"
        redirect_back(fallback_location: root_path)
      end
      format.js do
-       render plain: "You have successfully subscribed to Sue Gosney Exhibitions"
+       render plain: "You have successfully subscribed to my exhibitions newsletter"
      end
    end
   else
