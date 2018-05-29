@@ -29,7 +29,7 @@ class PaintingImageUploader < CarrierWave::Uploader::Base
   # end
 
   version :large do
-      process resize_to_fit: [1680, 1680]
+      process resize_to_fit: [840, 840]
   end
 
 
