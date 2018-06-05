@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
             fadein.style.transitionDelay = delay + 'ms'
           })
 
+          inView('.fade')
+            .on('enter', img => {
+            img.classList.add('visible')
+            })
+            .on('exit', section => {
+                img.classList.remove('visible')
+            })
+            inView.threshold(0.2)
+
         })
 
         $("form.newsletter").on("ajax:success", function (ev, data, status, xhr) {
